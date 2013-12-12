@@ -7,6 +7,8 @@ gem 'pry'
 
 gem 'protected_attributes'
 
+gem 'pg'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
