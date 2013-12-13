@@ -12,6 +12,7 @@ namespace:db do
           hsp_account_id:       row[:hsp_account_id],
           pat_mrn_id:           row[:pat_mrn_id],
           pat_name:             row[:pat_name],
+          medicare_id:          row[:medicare_id],
           medicaid_id:          row[:medicaid_id],
           account_class:        row[:account_class],
           har_adm_date:         row[:har_adm_date],
