@@ -17,7 +17,7 @@ class Match < ActiveRecord::Base
     adm_dates = []
     m.each do |x|
       medicare_ids << x.medicare_id
-      adm_dates << x.har_adm_date 
+      adm_dates << x.har_adm_date.gsub(/\s\d+:\d{2}:\d{2}/, "")
     end
     z = medicare_ids.zip(adm_dates)
     binding.pry
