@@ -12,4 +12,15 @@ class Record < ActiveRecord::Base
   def parse_quotes(col)
     col.gsub(/\D/, "")
   end
+
+  def self.prep
+    r = Record.all
+    hic_nums = []
+    service_froms = []
+    r.each do |x|
+      hic_nums << x.hic_num 
+      service_froms << x.service_from.gsub(/\s\d+:\d{2}:\d{2}/, "")
+    end
+    y = hic_nums.zip(service_froms)
+  end
 end
